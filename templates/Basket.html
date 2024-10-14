@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %} 
+
+{% block title %} The Record Shop {% endblock %} 
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Stylesheet.css') }}">
+</head>
+<body>
+    <div class = 'basketItems'></div>
+        {% for item in basket %}
+            <div class="BasketItem">
+                <p>
+                    <img class = "tableImages" src="{{ url_for('static', filename=albums[item]['image']) }}">
+                </p>
+                <div class="basketblock">
+                    <p class="basketName"><a href="{{ url_for('SingleProduct', itemId=item) }}"">{{ albums[item]['name'] }}</a></p>
+                    <p class="basketArtist">{{ albums[item]['artist'] }}</p>
+                </div>
+                <p class="basketprice">£{{ albums[item]['price'] }}</p>
+                <p class="basketquantity">Quantity: {{ basket[item] }}</p>
+                <p>
+                    <form method="POST" class="BasketForm">
+                        <input type="hidden" name="remove_id" value="{{ item }}">
+                        <button type="submit">Remove</button>
+                    </form>
+                </p>
+            </div>
+        {% endfor %}
+        {% if total > 0 %}
+            <div class="BasketTotal">
+                <p>Total: £{{ total }}</p>
+                <a href="{{ url_for('Checkout')}}">Checkout</a>
+            </div>
+        {% else %}
+            <p class="EmptyBasket">Your Basket Is Empty</p>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}

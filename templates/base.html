@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %}
+{%block title %} The Record Shop {% endblock %} 
+
+
+
+{% block navbar %}
+<head>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+</head>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a class="navbar-brand" href="{{ url_for('Gallery') }}">
+      <img src="{{ url_for('static', filename='Logo.png') }}">
+      <p>The Record Shop</p>
+    </a>
+    <div class="links">
+      <ul class="right-nav">
+        <li>
+          <a href="{{ url_for('Basket') }}">
+            <img src="{{ url_for('static', filename='basket.png') }}">
+          </a>
+        </li>
+      </ul> 
+    </div>
+  </div>
+</nav>
+{% endblock %}

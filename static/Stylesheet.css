@@ -1,0 +1,409 @@
+body {
+    background-color: rgb(228, 228, 228);
+}
+
+.SortingForm {
+    display: inline-flex;
+    margin: 10px;
+    margin-left: 35px;
+    padding: 5px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.SortingForm label {
+    padding: 5px;
+}
+
+.SortingForm select {
+    color: black;
+    border: 1px solid black;
+}
+
+.SortingForm button[type="submit"] {
+    background-color: black;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.Gallery {
+    display: inline-flex;
+    max-width: 400px;
+    margin-bottom: 10px;
+    margin: 5px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Gallery img {
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+.Gallery:hover {
+    outline-color: black;
+}
+
+
+
+
+.name,
+.artist,
+.price {
+    margin-left: 10px;
+}
+
+
+
+.Gallery-list {
+    display: grid;
+}
+
+
+.name {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.name:hover {
+    text-decoration: underline;
+}
+
+.artist {
+    color: rgb(60, 60, 60);
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.price {
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.env {
+    float: right;
+    margin-right: 10px;
+}
+
+.Galinputs {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.Galinputs {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Galinputs input[type="number"],
+.Galinputs button[type="submit"] {
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #ccc;
+}
+
+.Galinputs button[type="submit"] {
+    font-family: 'Asap', sans-serif;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.Galinputs button[type="submit"]:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+
+.Galinputs input[type="number"]:focus,
+.Galinputs button[type="submit"]:focus {
+    outline: none;
+    border-color: black;
+}
+
+.SingleMain {
+    margin: 30px;
+    padding: 30px;
+    display: inline-flex;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.SingleImage img {
+    display: grid;
+    padding: 10px;
+    width: 700px;
+    height: 700px;
+    resize: both;
+}
+
+.TextList {
+    display: block;
+}
+
+.SingleText {
+    display: block;
+    padding: 30px;
+    font-family: 'Asap', sans-serif;
+}
+
+.SingleName {
+    font-size: 35px;
+    color: black;
+    font-weight: bolder;
+}
+
+.SingleArtist {
+    font-size: 12px;
+    color: rgb(46, 46, 46);
+}
+
+.SinglePrice {
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+.SingleDescription {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.SingleEnvironment {
+    font-size: 10px;
+    color: black;
+}
+
+.Galinputs {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.Singleinputs {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Singleinputs input[type="number"],
+.Singleinputs button[type="submit"] {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+}
+
+.Singleinputs button[type="submit"] {
+    font-family: 'Asap', sans-serif;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.Singleinputs button[type="submit"]:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+
+.Singleinputs input[type="number"]:focus,
+.Singleinputs button[type="submit"]:focus {
+    outline: none;
+    border-color: black;
+}
+
+.basketlink {
+    margin-top: 10px;
+    display: inline-flex;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    background-color: rgb(32, 32, 32);
+    border-radius: 2px;
+    color: rgb(183, 183, 183);
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.basketlink:hover {
+    color: white;
+    background-color: rgb(43, 43, 43);
+}
+
+.basketblock {
+    margin-top: 75px;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.basketblock p,
+a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.basketName a {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.basketName a:hover {
+    color: rgb(30, 30, 30);
+}
+
+.basketArtist,
+.basketprice,
+.basketquantity {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.BasketItem {
+    display: inline-flex;
+    margin: 10px auto;
+    margin-left: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.BasketItem img {
+    padding: 10px;
+}
+
+.BasketItem p,
+form {
+    align-self: center;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+.BasketItems {
+    align-self: center;
+}
+
+.tableImages {
+    width: 200px;
+    height: 200px;
+}
+
+.BasketTotal {
+    display: inline-block;
+    margin: 10px auto;
+    margin-left: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.BasketTotal p {
+    font-weight: bold;
+    color: black;
+}
+
+.BasketForm button[type="submit"] {
+    display: block;
+    padding: 8px;
+    background: black;
+    border: 1px solid rgb(182, 182, 182);
+    color: white;
+}
+
+.BasketForm button[type="submit"]:hover {
+    background: rgb(184, 184, 184);
+    color: black;
+    border: 1px solid black;
+}
+
+.BasketTotal a {
+    display: inline-block;
+    padding: 8px;
+    background: black;
+    border: 1px solid rgb(182, 182, 182);
+    color: white;
+}
+
+.BasketTotal a:hover {
+    background: rgb(184, 184, 184);
+    color: black;
+    border: 1px solid black;
+}
+
+.EmptyBasket {
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkoutForm {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.checkoutForm label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+.checkoutForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.checkoutForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.checkoutForm button[type="submit"]:hover {
+    background: rgb(184, 184, 184);
+    color: black;
+    border: 1px solid black;
+}

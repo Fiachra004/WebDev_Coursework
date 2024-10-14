@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title%} The Record Shop {% endblock %} 
+
+{% block content %}
+<head>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Stylesheet.css') }}">
+</head>
+
+<body>
+  <form method="get" action="{{ url_for('Gallery') }}" class="SortingForm">
+    <label for="sort_by">Sort by:</label>
+    <select name="sort_by" id="sort_by">
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+        <option value="environment">environment</option>
+    </select>
+    <button type="submit">Sort</button>
+  </form>
+  <ul class="Gallery-ul">
+    {% for album in albums %}
+    <div class="Gallery">
+      <li class="Gallery-list">
+        <a href="{{ url_for('SingleProduct', itemId=album.id) }}">
+          <p>
+            <img src="{{ url_for('static', filename=album.image) }}" alt="{{ album.name }}">
+          </p>
+          <p class="name">{{ album.name }}</p>
+          <p class="artist">{{ album.artist }}<span class="env">{{ album.environment }}Kg of CO2</span></p>
+          <p class="price">£ {{ album.price }}</p>
+        </a>
+        <form class="Galinputs" method=POST>
+          <input type="hidden" name="item_id" value="{{ album.id }}">
+          <input type="number" value="1" id="quantity" name="quantity" min="1" max="100">
+          <button type="submit">Add To Cart</button>
+        </form>
+      </li>
+    </div>
+    {% endfor %}
+  </ul>
+</body>
+
+{% endblock %}

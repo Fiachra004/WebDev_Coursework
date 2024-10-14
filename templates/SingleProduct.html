@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} 
+{% block title%} The Record Shop {% endblock %} 
+
+{% block content %}
+
+<head>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Stylesheet.css') }}">
+</head>
+
+<body class = "SingleBody">    
+  <div class = "SingleMain">
+    <div class = "SingleImage">
+      <img src="{{ url_for('static', filename=album.image) }}">
+    </div>
+    <ul class = "SingleText">
+      <li class = "TextList">
+        <p class = "SingleName">{{album.name}}</p>
+        <p class = "SingleArtist">{{album.artist}}</p>
+        <p class = "SinglePrice">£{{album.price}}</p>
+        <p class = "SingleDescription">{{album.description}}</p>
+        <p class = "SingleEnvironment">{{album.environment}}</p>   
+        <form class="Singleinputs" method=POST>
+          <input type="hidden" name="item_id" value="{{ album.id }}">
+          <input type="number" value="1" id="quantity" name="quantity" min="1" max="100">
+          <button type="submit">Add To Cart</button>
+        </form>
+    </li>
+    </ul>
+  </div>
+</body>
+
+{% endblock %}
